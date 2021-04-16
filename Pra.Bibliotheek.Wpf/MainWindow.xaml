@@ -4,12 +4,12 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Pra.Bibliotheek.Wpf"
-        mc:Ignorable="d"
-        Loaded="Window_Loaded" Closing="Window_Closing">
+        mc:Ignorable="d" Title="Books"
+        Loaded="Window_Loaded" Closing="Window_Closing" Height="811" Width="822" WindowStartupLocation="CenterScreen">
     <Grid>
-        <GroupBox x:Name="grpLeft" Header="Beschikbare boeken" HorizontalAlignment="Left" Height="614" Margin="10,0,0,0" VerticalAlignment="Center" Width="323">
+        <GroupBox x:Name="grpLeft" Header="Beschikbare boeken" HorizontalAlignment="Left" Height="594" Margin="10,10,0,0" VerticalAlignment="Top" Width="323">
             <Grid>
-                <ListBox x:Name="lstBooks" HorizontalAlignment="Center" Height="438" Margin="0,143,0,0" VerticalAlignment="Top" Width="291" SelectionChanged="LstBooks_SelectionChanged"/>
+                <ListBox x:Name="lstBooks" HorizontalAlignment="Center" Height="418" Margin="0,143,0,0" VerticalAlignment="Top" Width="291" SelectionChanged="LstBooks_SelectionChanged"/>
                 <Button x:Name="btnNew" Content="Nieuw" HorizontalAlignment="Left" Height="27" Margin="10,10,0,0" VerticalAlignment="Top" Width="80" Click="BtnNew_Click"/>
                 <Button x:Name="btnEdit" Content="Wijzig" HorizontalAlignment="Left" Height="27" Margin="95,10,0,0" VerticalAlignment="Top" Width="80" Click="BtnEdit_Click"/>
                 <Button x:Name="btnDelete" Content="Verwijder" HorizontalAlignment="Left" Height="27" Margin="180,10,0,0" VerticalAlignment="Top" Width="80" Click="BtnDelete_Click"/>
@@ -60,6 +60,15 @@
                 <Button x:Name="btnEditPublisher" Content="Geselecteerde uitgever bijwerken" HorizontalAlignment="Left" Height="26" Margin="213,79,0,0" VerticalAlignment="Top" Width="190" Click="BtnEditPublisher_Click"/>
                 <Button x:Name="btnDeletePulisher" Content="Geselecteerde uitgever verwijderen" HorizontalAlignment="Left" Height="26" Margin="213,112,0,0" VerticalAlignment="Top" Width="190" Click="BtnDeletePulisher_Click"/>
                 <Button x:Name="btnClearUitgever" Content="X" HorizontalAlignment="Left" Height="22" Margin="384,13,0,0" VerticalAlignment="Top" Width="20" Click="BtnClearUitgever_Click"/>
+
+            </Grid>
+        </GroupBox>
+        <GroupBox x:Name="grpDBsystems" IsEnabled="False" Header="DB system" Background="Moccasin" HorizontalAlignment="Left" Height="151" Margin="10,614,0,0" VerticalAlignment="Top" Width="780">
+            <Grid>
+                <RadioButton x:Name="rdbDisconnected" Content="Disconnected database" IsChecked="True"  HorizontalAlignment="Left" Height="17" Margin="10,10,0,0" VerticalAlignment="Top" Width="258" />
+                <RadioButton x:Name="rdbConnected1"  Content="Connected database : ADO.Net" HorizontalAlignment="Left" Height="17" Margin="10,32,0,0" VerticalAlignment="Top" Width="258" />
+                <RadioButton x:Name="rdbConnected2"  Content="Connected database : ADO.Net + stored procedures"   HorizontalAlignment="Left" Height="17" Margin="10,0,0,0" VerticalAlignment="Center" Width="336" />
+                <RadioButton x:Name="rdbConnected3"  Content="Connected database : ADO.Net + Dapper"   HorizontalAlignment="Left" Height="17" Margin="10,78,0,0" VerticalAlignment="Top" Width="258"/>
 
             </Grid>
         </GroupBox>
